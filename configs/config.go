@@ -14,11 +14,11 @@ type APIConfig struct {
 }
 
 type DBConfig struct {
-	Host     string
-	Port     string
-	User     string
-	Pass     string
-	Database string
+	Host string
+	Port string
+	User string
+	Pass string
+	Name string
 }
 
 func init() {
@@ -45,11 +45,11 @@ func Load() error {
 		Port: viper.GetString("api.port"),
 	}
 	cfg.DB = DBConfig{
-		Host:     viper.GetString("database.host"),
-		Port:     viper.GetString("database.port"),
-		User:     viper.GetString("database.user"),
-		Pass:     viper.GetString("database.pass"),
-		Database: viper.GetString("database.database"),
+		Host: viper.GetString("database.host"),
+		Port: viper.GetString("database.port"),
+		User: viper.GetString("database.user"),
+		Pass: viper.GetString("database.pass"),
+		Name: viper.GetString("database.name"),
 	}
 
 	return nil
