@@ -7,6 +7,7 @@ import (
 	"strconv"
 
 	"github.com/gleisonbs/todo-api/models"
+	"github.com/go-chi/chi/v5"
 )
 
 func Update(w http.ResponseWriter, r *http.Request) {
